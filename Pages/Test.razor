@@ -1,0 +1,19 @@
+﻿@page "/test"
+@using MudBlazor
+
+<MudContainer MaxWidth="MaxWidth.Medium">
+    <MudPaper Elevation="3" Class="p-4">
+        <h3 class="mb-4">Test Date Picker and Select</h3>
+
+        <MudDatePicker Label="Test Date" @bind-Value="testDate" Required="true" />
+        <MudSelect Label="Test Select" @bind-Value="selectedValue">
+            <MudSelectItem Value=@("Option1")>Option 1</MudSelectItem>
+            <MudSelectItem Value=@("Option2")>Option 2</MudSelectItem>
+        </MudSelect>
+    </MudPaper>
+</MudContainer>
+
+@code {
+    private DateTime? testDate;
+    private string selectedValue;
+}
